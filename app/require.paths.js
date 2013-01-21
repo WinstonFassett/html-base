@@ -4,11 +4,11 @@ require.config({
         text: 'require/text',
         css: 'require/css',
 
-	    knockout: 'ux/knockout-2.2.1.debug',
-	    jquery: 'ux/jquery-1.7.2.min',
-	    hasher: 'ux/hasher',
-	    crossroads: 'ux/crossroads',
-        signals: 'util/signals'
+	    knockout: 'lib/knockout-2.2.1.debug',
+	    jquery: 'lib/jquery-1.7.2.min',
+	    hasher: 'lib/hasher',
+	    crossroads: 'lib/crossroads',
+	    signals: 'lib/signals'        
 	},
 	map: {
 	},

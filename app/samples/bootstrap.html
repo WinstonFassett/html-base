@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<meta name="description" content="" />	        
+        <style>
+            .viewer {
+                background: #eee;
+                padding: 10px;
+                border: solid 1px #ccc;
+            }
+        </style>
+	</head>
+    <body>	
+
+
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Project name</a>
+          
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#settings">Settings</a></li>
+            </ul>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+
+    </div> <!-- /container -->
+
+        <div class="container" data-bind="template: { afterRender: $data.afterRender }">
+            
+            <div class="viewer">
+                <div class="about pane">
+                    This is the About pane
+
+                    <h1>Bootstrap starter template</h1>
+                    <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+
+                </div>
+                <div class="contact pane">
+                    This is the Contact pane
+                </div>
+                <div class="home pane">
+                    <h2 data-bind="text: title"></h2>
+		            <input data-bind="value: title, valueUpdate: 'afterkeydown'" />
+		            <button type="submit" class="btn" data-bind="click: sayHello">Click Me</button>
+		        </div>
+                <div class="settings pane">
+                    Settings go here
+                </div>	    
+            </div>
+        </div>
+        
+	    <script src="../require.min.js"></script>
+	    <script>
+	    require.config({ 
+		    baseUrl: '../../app'
+		    //, urlArgs: "bust=0.9.7.4"  // + (new Date()).getTime()
+		    , deps: ['samples/bootstrap/main']
+            , config: {
+                'spa/router': {
+                    defaultRoute: 'home'
+                }
+            }
+	    });
+	    </script>
+    </body>
+</html>
