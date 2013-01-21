@@ -37,8 +37,9 @@
                     activePane.removeClass(activeClass);
                 }, animationDuration);
             } else {
-                pane.addClass(activeClass);
                 activePane.removeClass(activeClass);
+                pane.addClass(activeClass);
+                
             }
             
 
