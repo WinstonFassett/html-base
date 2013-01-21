@@ -1,13 +1,12 @@
 define(['require','knockout'], function(require, ko){
 	
-	var title_ = ko.observable('title');
+    var title_ = ko.observable('hello');
+    
+    return {
+		title: title_,
+		sayHello: function () {
+            alert('Hello ' + title_() + '!', 'Greetings');
+        }
+    };
 	
-	function start(){
-		//alert('hello');
-	}	
-	
-	return {
-		start: start,		
-		title: title_
-	};
 });
