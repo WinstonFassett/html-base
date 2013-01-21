@@ -1,4 +1,4 @@
-define(['require', 'require.paths'], function(require){
+define(['require', 'require.paths', 'ux/consoleFallback'], function(require){
 	require(['./shell', 'knockout'], function(app, ko){
 		//app.start();
 		console.log('binding', app);
