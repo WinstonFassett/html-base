@@ -144,7 +144,7 @@
                           </div>
 
                     <h3>Tooltip</h3>
-                    <div data-bind="template: { afterRender: function(){ var tooltips = $('[rel=tooltip]'); console.log('tooltips', tooltips); tooltips.tooltip(); console.log('done'); } }">
+                    <div>
 
                       <p>Hover over the links below to see tooltips:</p>
                       <div class="bs-docs-example tooltip-demo">
@@ -186,7 +186,7 @@
                     </div>
 
                     <h3>Popover</h3>
-                    <div data-bind="template: { afterRender: function(){ var popovers= $('[rel=popover]'); console.log('popovers', popovers); popovers.popover(); console.log('done'); } }">
+                    <div>
 
                         <h3>Live demo</h3>
                         <div class="bs-docs-example" style="padding-bottom: 24px;">
@@ -268,6 +268,18 @@
                           </p>
                         </div>
                       </div>
+
+                    <h3>Like / Love / Share / Delete</h3>
+                    <div class="btn-toolbar">
+                      <div class="btn-group">
+                          <a href="#" class="btn btn-inverse disabled"><i class="icon-white icon-thumbs-up"></i></a>
+                          <a href="#" class="btn btn-inverse disabled"><i class="icon-white icon-heart"></i></a>
+                          <a href="#" class="btn btn-inverse disabled"><i class="icon-white icon-share-alt"></i></a>
+                      </div>
+                      <div class="btn-group">
+                          <a href="#" class="btn btn-inverse disabled"><i class="icon-white icon-trash"></i></a>
+                      </div>
+                    </div>
                 </div>
                 <div class="home pane">
                     <h2 data-bind="text: title"></h2>

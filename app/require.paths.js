@@ -14,6 +14,7 @@ require.config({
 	map: {
 	},
 	shim: {
+        jquery: '$',
 	    bootstrap: { deps: ['jquery'] }
 	}
 });
