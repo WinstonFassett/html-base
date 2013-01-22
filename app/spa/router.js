@@ -8,7 +8,7 @@
     function init() {
         config = module.config();
         //log('configuring hasher');
-        hasher.initialized.add(parseHash); //parse initial hash
+        hasher.initialized.add(initHash); //parse initial hash
         hasher.changed.add(parseHash); //parse hash changes
         // log('configured hasher');
     }
@@ -26,17 +26,23 @@
         crossroads.parse(uri, defaultOpts);
     }
 
-    function parseHash(newHash, oldHash) {
-        _currentRoute(newHash);
+    function initHash(newHash, oldHash) {
         if (newHash) {
-            console.log('parsing hash', arguments);
-            route(newHash);
+            parseHash(newHash, oldHash);
         } else {
             if (config.defaultRoute) {
                 // log('going to default route:', config.defaultRoute);
                 hasher.setHash(config.defaultRoute);
             }
         }
+    }
+
+    function parseHash(newHash, oldHash) {
+        _currentRoute(newHash);
+        if (newHash) {
+            console.log('parsing hash', arguments);
+            route(newHash);
+        } 
     }
 
     function registerRoute(path, handler) {
