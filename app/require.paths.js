@@ -8,9 +8,12 @@ require.config({
 	    jquery: 'lib/jquery-1.7.2.min',
 	    hasher: 'lib/hasher',
 	    crossroads: 'lib/crossroads',
-	    signals: 'lib/signals'        
+	    signals: 'lib/signals',
+        bootstrap: 'lib/bootstrap/js/bootstrap'
 	},
 	map: {
 	},
-	shim: {}
+	shim: {
+	    bootstrap: { deps: ['jquery'] }
+	}
 });
