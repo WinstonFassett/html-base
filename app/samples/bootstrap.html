@@ -185,6 +185,24 @@
                       </div>
                     </div>
 
+                    <h3>Popover</h3>
+                    <div data-bind="template: { afterRender: function(){ var popovers= $('[rel=popover]'); console.log('popovers', popovers); popovers.popover(); console.log('done'); } }">
+
+                        <h3>Live demo</h3>
+                        <div class="bs-docs-example" style="padding-bottom: 24px;">
+                          <a href="#" class="btn btn-large btn-danger" rel="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Click to toggle popover</a>
+                        </div>
+
+                        <h4>Four directions</h4>
+                        <div class="bs-docs-example tooltip-demo">
+                          <ul class="bs-docs-tooltip-examples">
+                            <li><a href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
+                            <li><a href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
+                            <li><a href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
+                            <li><a href="#" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a></li>
+                          </ul>
+                        </div>
+                    </div>
                     <h3>Typeahead</h3>
                     <input type="text" data-provide="typeahead" data-items="5" data-source='["University of Pennsylvania","Harvard","Yale","Princeton","Cornell","Brown","Columbia","Dartmouth"]' />
 
