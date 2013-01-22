@@ -1,9 +1,11 @@
 define(['require', 'knockout', 'spa/router', 'ux/showPane', 'crossroads', 'jquery',
     // additional resources    
     'bootstrap',
-    'css!ux/panes.css',
-    'css!lib/bootstrap/css/bootstrap.css',
-    'css!lib/bootstrap/css/bootstrap-responsive.css',
+
+    // CSS is loaded by the page for optimal performance
+    //'css!ux/panes.css',
+    //'css!lib/bootstrap/css/bootstrap.css',
+    //'css!lib/bootstrap/css/bootstrap-responsive.css',
 
 ], function (require, ko, router, showPane, crossroads, jquery) {
 	

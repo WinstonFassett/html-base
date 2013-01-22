@@ -3,7 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title></title>
-		<meta name="description" content="" />	        
+		<meta name="description" content="" />	     
+        <link rel="stylesheet" href="../ux/panes.css" />   
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css" />   
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap-responsive.css" />   
+            
+    <!--'css!ux/panes.css',
+    'css!lib/bootstrap/css/bootstrap.css',
+    'css!lib/bootstrap/css/bootstrap-responsive.css',-->
         <style>
             .viewer {
                 background: #eee;
@@ -212,10 +219,15 @@
                       <strong>Warning!</strong> Best check yo self, you're not looking too good.
                     </div>
 
-                    <h3>Progress</h3>                    
-                    <div class="progress progress-striped active">
-                      <div class="bar" style="width: 40%;"></div>
-                    </div>
+                    <h3>Progress</h3> 
+                    <div data-bind="template: { data: { progress: ko.observable(35) } }">
+                        <input data-bind="value: progress, valueUpdate: 'afterkeydown'" type="number" />
+                        (<span data-bind="text: progress">test</span>)
+                        <div class="progress progress-striped active">
+                          <div class="bar" data-bind="style: {width: progress() + '%'}"></div>
+                        </div>
+
+                    </div>                   
 
                     <h3>Navbar</h3>
                     <div class="navbar">
