@@ -1,4 +1,10 @@
 require.config({
+
+    config: {
+        'app/spa/router': {
+            defaultRoute: 'home'
+        }
+    },
     paths: {
 
         text: 'require/text',
