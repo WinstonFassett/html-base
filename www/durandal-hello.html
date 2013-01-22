@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<meta name="description" content="" />						
+	</head>
+<body>
+	
+	<form class="form-inline">
+		<fieldset>
+			<legend data-bind="html: displayName"></legend>
+			<label>Name</label>
+			<input type="text" data-bind="value: name, valueUpdate: 'afterkeydown'"/>
+			<button type="submit" class="btn" data-bind="click: sayHello, enable: canSayHello">Click Me</button>
+		</fieldset>
+	</form>
+	
+	<script src="../require.min.js"></script>
+	<script>
+	require.config({ 
+		baseUrl: '../../app'
+		//, urlArgs: "bust=0.9.7.4"  // + (new Date()).getTime()
+		, deps: [ 'samples/durandal/hello/main' ]
+	});
+	</script>
+</body>
+</html>

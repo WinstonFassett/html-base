@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<meta name="description" content="" />						
+	</head>
+<body>
+	<div data-bind="template: { afterRender: $data.afterRender }">
+		<h2 data-bind="text: title"></h2>
+		<input data-bind="value: title, valueUpdate: 'afterkeydown'" />
+		<button type="submit" class="btn" data-bind="click: sayHello">Click Me</button>
+	</div>
+	<script src="../require.min.js"></script>
+	<script>
+	require.config({ 
+		baseUrl: '../../app'
+		//, urlArgs: "bust=0.9.7.4"  // + (new Date()).getTime()
+		, deps: [ 'samples/hello/main' ]
+	});
+	</script>
+</body>
+</html>

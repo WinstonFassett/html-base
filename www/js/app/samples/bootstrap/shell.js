@@ -1,4 +1,4 @@
-define(['require', 'knockout', 'spa/router', 'ux/showPane', 'crossroads', 'jquery',
+define(['require', 'knockout', 'app/spa/router', 'app/ux/showPane', 'crossroads', 'jquery',
     // additional resources    
     'bootstrap',
 
