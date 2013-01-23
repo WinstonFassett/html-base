@@ -1,4 +1,4 @@
-﻿define(["require", 'ux/addCssLink'], function (require, addCssLink) {
+﻿define(["require", 'app/ux/addCssLink'], function (require, addCssLink) {
     "use strict";
     //function load(path) {
     function load(name, require, load, config) {

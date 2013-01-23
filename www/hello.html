@@ -11,12 +11,12 @@
 		<input data-bind="value: title, valueUpdate: 'afterkeydown'" />
 		<button type="submit" class="btn" data-bind="click: sayHello">Click Me</button>
 	</div>
-	<script src="../require.min.js"></script>
+	<script src="js/lib/require.js"></script>
 	<script>
 	require.config({ 
-		baseUrl: '../../app'
+		baseUrl: 'js'
 		//, urlArgs: "bust=0.9.7.4"  // + (new Date()).getTime()
-		, deps: [ 'samples/hello/main' ]
+		, deps: [ 'app/samples/hello/main' ]
 	});
 	</script>
 </body>

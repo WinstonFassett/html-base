@@ -7,8 +7,8 @@ require.config({
     },
     paths: {
 
-        text: 'require/text',
-        css: 'require/css',
+        text: 'app/require/text',
+        css: 'app/require/css',
 
 	    knockout: 'lib/knockout-2.2.1.debug',
 	    jquery: 'lib/jquery-1.7.2.min',
