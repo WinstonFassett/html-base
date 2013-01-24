@@ -15,7 +15,8 @@ require.config({
 	    hasher: 'lib/hasher',
 	    crossroads: 'lib/crossroads',
 	    signals: 'lib/signals',
-        bootstrap: 'lib/bootstrap/js/bootstrap'
+	    bootstrap: 'lib/bootstrap/js/bootstrap',
+        sammy: 'lib/sammy'
 	},
 	map: {
 	},
