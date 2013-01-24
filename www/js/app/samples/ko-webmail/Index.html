@@ -2,8 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>KO Webmail</title>
-    <link rel="Stylesheet" href="coderunner.css" />
-    <link rel="Stylesheet" href="webmail.css" />
+    <link rel="stylesheet" href="main.css" />
 </head>
 <body>
     <!-- Folders -->
@@ -39,16 +38,9 @@
     <script src="../../../app/require.min.js"></script>
     <script>
         require.config({
-            baseUrl: '../../..'
+            baseUrl: '../../..',
+            deps: ['app/samples/ko-webmail/main']
         });
-    </script>
-    <script type="text/javascript">
-        require(['require.paths'], function main() {
-            require(['knockout', 'app/samples/ko-webmail/webmail', 'app/samples/ko-webmail/routes'], function (ko, webmail) {
-                ko.applyBindings(webmail);
-            });
-        });
-        
     </script>
 </body>
 </html>
