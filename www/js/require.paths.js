@@ -22,6 +22,7 @@ require.config({
 	},
 	shim: {
         jquery: '$',
-	    bootstrap: { deps: ['jquery'] }
+        bootstrap: { deps: ['jquery'] },
+        sammy: { deps: ['jquery'] }
 	}
 });
